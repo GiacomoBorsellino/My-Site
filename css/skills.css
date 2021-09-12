@@ -1,0 +1,618 @@
+/* ALL PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: louis cafe;
+    src: url(../font/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: squared;
+    src: url(../font/square.ttf);
+}
+
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(10deg, rgba(255,255,255,1) 40.8%, rgba(43,58,81,1) 41%);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: louis cafe;
+    color: white;
+}
+
+/* WELCOME */
+.welcomeContainer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: white;
+    color: #2b3a51;
+    animation: wel2 3s linear;
+}
+@keyframes wel2 {
+    0%{opacity: 1;}
+    25%{opacity: 1;}
+    75%{opacity: 1;}
+    100%{opacity: 0;}
+
+    
+}
+
+.welcomeSubContainer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.welcomeSubContainer h3 {
+    display: flex;
+    position: fixed;
+    top: 40%;
+    
+    font-family: squared;
+    font-size: 3.5rem;
+    font-weight: 400;
+
+    animation: wel 1.5s linear;
+}
+
+@keyframes wel {
+    0%{opacity: 0; transform: rotateZ(0deg);}
+    100%{opacity: 1; transform: rotateZ(360deg);}
+}
+
+/* MENU */
+.menuContainer {
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+
+    z-index: 2;
+}
+
+.menuSubContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img1 {
+    width: 3rem;
+    position: fixed;
+    left: 1.5rem;
+    cursor: pointer;
+}
+
+.img2 {
+    width: 3rem;
+    position: fixed;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+.listMenu {
+    display: none;
+}
+
+/* TAB MENU */
+.tabContainer {
+    display: flex;
+    /* invisible ;) */
+    display: none;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+    color: #2b3a51;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 1;
+    animation: openMenu 0.5s linear;
+}
+
+@keyframes openMenu {
+    0%{height: 0%;}
+    100%{height: 100%;}
+    
+}
+
+.tabSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: auto;
+    padding-top: 60%;
+    text-align: center;
+
+    list-style-type: none;
+    line-height: 3rem;
+
+    animation: openMenu2 0.7s linear;
+}
+
+@keyframes openMenu2 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.tabSubContainer li a:link, 
+.tabSubContainer li a:visited, 
+.tabSubContainer li a:active {
+    color: #2b3a51;
+    text-decoration: none;
+} 
+
+.li1 {
+    animation: openLi1 0.2s linear;
+}
+
+@keyframes openLi1 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li2 {
+    animation: openLi2 0.4s linear;
+}
+
+@keyframes openLi2 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li3 {
+    animation: openLi3 0.6s linear;
+}
+
+@keyframes openLi3 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li4 {
+    animation: openLi4 0.8s linear;
+}
+
+@keyframes openLi4 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+/* CLOSE MENU */
+.closeMenu {
+    animation: closeMenu 0.7s linear;
+}
+
+@keyframes closeMenu {
+    0%{height: 100%;}
+    100%{height: 0%;}
+}
+
+.lia {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLia 0.7s linear;
+}
+
+@keyframes openLia {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lib {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLib 0.6s linear;
+}
+
+@keyframes openLib {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lic {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLic 0.5s linear;
+}
+
+@keyframes openLic {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lid {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLid 0.4s linear;
+}
+
+@keyframes openLid {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+/* CONTENT */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    margin-top: 6rem;
+}
+
+.introContainer {
+    padding: 1rem;
+}
+
+.tabCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: #2b3a51;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #2b3a51;
+}
+
+.tabSubCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    text-align: center;
+}
+
+.tabSubCard h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 1rem;
+    color: #181b20;
+}
+
+.tabSubCard p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tabCard ul {
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.tabCard li {
+    line-height: 1.5rem;
+}
+
+.cap {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #181b20;
+}
+
+.tabCard img {
+    width: 20%;
+    margin: 1.7rem auto;
+}
+
+/* FOOTER */
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+.footerSubContainer {
+    display: flex;
+    justify-content: center;  
+    position: relative;
+}
+
+h4 {
+    color: #2b3a51;
+    font-size: 0.9rem;
+    font-weight: 900;
+    margin: 1rem;
+}
+
+/* MOBILE 320px */
+@media only screen and (max-width: 321px) {
+
+/* MENU */
+.img1 {
+    width: 2.2rem;
+}
+
+.img2 {
+    width: 2.2rem;
+}
+
+/* CONTENT */
+.mainContainer {
+    padding: 9rem 0.5rem;
+}
+
+.mainSubContainer h1 {
+    font-size: 2rem;
+}
+
+/* FOOTER */
+h4 {
+    font-size: 0.7rem;
+}
+
+}
+
+/* TABLET 768px */
+@media only screen and (min-width: 767px) {
+
+/* MENU */
+.img1 {
+    width: 3rem;
+}
+
+.img2 {
+    width: 3rem;
+}
+
+/* TAB MENU */
+.tabContainer {
+    font-size: 2.3rem;
+    font-weight: 700;
+
+}
+
+.tabSubContainer {
+    padding-top: 50%;
+    line-height: 4rem;
+}
+
+/* CONTENT */
+.tabCard img {
+    width: 4rem;
+}
+
+.tabCard p {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tabCard ul {
+    font-size: 1.2rem;
+}
+
+.tabCard li {
+    line-height: 2rem;
+}
+
+/* FOOTER */
+h4 {
+    font-size: 1.2rem;
+}
+
+}
+
+/* TABLET PLUS 1024px */
+@media only screen and (min-width: 1023px) {
+
+/* MENU */
+.img1 {
+    width: 3.5rem;
+}
+
+.img2 {
+    width: 3.5rem;
+}
+
+/* CONTENT */
+.tabCardSubContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabCard {
+    display: flex;
+    justify-content: start;
+
+    width: 80%;
+
+    margin: 0.3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #2b3a51;
+}
+
+.tabSubCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    text-align: center;
+}
+
+/* FOOTER */
+.footerSubContainer {
+    position: absolute;
+    bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+}
+
+/* DESKTOP 1366px */
+@media only screen and (min-width: 1365px) {
+
+/* MENU */
+.img1 {
+    width: 2.2rem;
+}
+
+.img2 {
+    display: none;
+}
+
+.listMenu {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    list-style-type: none;
+    align-content: center;
+    font-weight: 500;
+}
+
+.listMenu li {
+    margin: 0rem 1.5rem;
+}
+
+.listMenu li a:link,
+.listMenu li a:visited, 
+.listMenu li a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.listMenu li a {
+    padding-bottom: 0.3rem;
+} 
+.listMenu li a:hover {
+    font-weight: 700;
+    border-bottom: 2px solid white;
+}
+
+/* TAB MENU */
+.tabContainer {
+    display: none;
+}
+
+/* CONTENT */
+main {
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    width: 90%;
+}
+
+.introContainer {
+    margin: 2rem;
+    margin-top: 6rem;
+}
+
+.introContainer p {
+    margin: 1rem;
+}
+
+.tabCard {
+    margin: 0.5rem;
+}
+
+.tabCard img {
+    margin: 1.4rem auto;
+}
+
+.tabSubCard {
+    padding: 0rem 3rem;
+}
+
+.tabCard h2 {
+    font-size: 1.3rem;
+}
+
+.tabCard p {
+    font-size: 1rem;
+}
+
+.tabCard li  {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.cap {
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+.footerSubContainer {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+
+}
+
+}
+
+/* DESKTOP PLUS 1920px */
+@media only screen and (min-width: 1919px) {
+
+/* MENU */
+.img1 {
+    width: 2.7rem;
+}
+
+.img2 {
+    width: 2.7rem;
+}
+
+/* CONTENT */
+main {
+    margin: auto;
+}
+.container {
+    margin: auto;
+    width: 70%;
+}
+
+.introContainer {
+    margin-top: 7rem;
+}
+
+/* FOOTER */
+.footerSubContainer {
+    position: absolute;
+    bottom: 0.7rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+}
+

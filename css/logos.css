@@ -1,0 +1,52 @@
+/* ALL PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    animation: rotationBg 4s infinite;
+    overflow: hidden;
+}
+
+@keyframes rotationBg {
+    0%{background-color: white;}
+    50%{background-color: black;}
+    100%{background-color: white;} 
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.root img {
+    margin: auto;
+    width: 350%;
+    animation: rotationImg 4s infinite;
+}
+
+@keyframes rotationImg {
+    0%{opacity: 0; filter: brightness(0%);}
+    10%{opacity: 1;}
+    50%{filter: brightness(100%);}
+    90%{opacity: 1;}
+    100%{opacity: 0; filter: brightness(0%);} 
+}
+
+@media only screen and (min-width:1365px) {
+.root img {
+    width: 100%;
+}   
+}
+
+@media only screen and (min-width:1919px) {
+.root img {
+    width: 200%;
+}   
+}

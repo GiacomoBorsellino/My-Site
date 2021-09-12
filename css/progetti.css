@@ -1,0 +1,831 @@
+/* ALL PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: louis cafe;
+    src: url(../font/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: squared;
+    src: url(../font/square.ttf);
+}
+
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(10deg, rgba(255,255,255,1) 40.8%, rgba(43,58,81,1) 41%);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: louis cafe;
+    color: white;
+}
+
+/* MENU */
+.menuContainer {
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+
+    z-index: 3;
+}
+
+.menuSubContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img1 {
+    width: 3rem;
+    position: fixed;
+    left: 1.5rem;
+    cursor: pointer;
+}
+
+.img2 {
+    width: 3rem;
+    position: fixed;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+.listMenu {
+    display: none;
+}
+
+/* TAB MENU */
+.tabContainer {
+    display: flex;
+    /* invisible ;) */
+    display: none;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+    color: #2b3a51;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 2;
+    animation: openMenu 0.5s linear;
+}
+
+@keyframes openMenu {
+    0%{height: 0%;}
+    100%{height: 100%;}
+}
+
+.tabSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: auto;
+    padding-top: 60%;
+    text-align: center;
+
+    list-style-type: none;
+    line-height: 3rem;
+
+    animation: openMenu2 0.7s linear;
+}
+
+@keyframes openMenu2 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.tabSubContainer li a:link, 
+.tabSubContainer li a:visited, 
+.tabSubContainer li a:active {
+    color: #2b3a51;
+    text-decoration: none;
+} 
+
+.li1 {
+    animation: openLi1 0.2s linear;
+}
+
+@keyframes openLi1 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li2 {
+    animation: openLi2 0.4s linear;
+}
+
+@keyframes openLi2 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li3 {
+    animation: openLi3 0.6s linear;
+}
+
+@keyframes openLi3 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+.li4 {
+    animation: openLi4 0.8s linear;
+}
+
+@keyframes openLi4 {
+    0%{margin:-3rem}
+    100%{margin:0rem}
+}
+
+/* CLOSE MENU */
+.closeMenu {
+    animation: closeMenu 0.7s linear;
+}
+
+@keyframes closeMenu {
+    0%{height: 100%;}
+    100%{height: 0%;}
+}
+
+.lia {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLia 0.7s linear;
+}
+
+@keyframes openLia {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lib {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLib 0.6s linear;
+}
+
+@keyframes openLib {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lic {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLic 0.5s linear;
+}
+
+@keyframes openLic {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+.lid {
+    margin-top: -3rem;
+    opacity: 0;
+    animation: openLid 0.4s linear;
+}
+
+@keyframes openLid {
+    0%{margin-top: 0rem; opacity: 1;}
+    100%{margin-top: -3rem; opacity: 0;}
+}
+
+/* CONTENT */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    margin: 0rem;
+}
+
+.IntroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    margin-top: 5rem;
+}
+
+.IntroSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    text-align: center;
+    margin: 2rem;
+    line-height: 1.5rem;
+}
+
+/* GROUP CARD */
+.groupCardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.groupCardSubContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardContainer {
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.rotateCard {
+    animation: rotateCard 1s linear;
+}
+
+@keyframes rotateCard {
+    0% {transform: rotateY(90deg);}
+    100% {transform: rotateY(0deg);}
+}
+
+.cardSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    overflow: hidden;
+}
+
+.cardSubContainer img {
+    width: 80%;
+    margin: auto;
+    z-index: 1;
+}
+
+figcaption {
+    font-size: 0.7rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    z-index: 0;
+
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+}
+
+figcaption h2 {
+    margin-top: 2.3rem;
+}
+
+figcaption span {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+figcaption span:hover {
+    background-color: #2b3a51;
+}
+
+figcaption:hover {
+    background-color: rgba(12, 11, 11, 0.7);
+    z-index: 1;
+    animation: fadein 0.5s linear;
+}
+
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+figure img:hover {
+    z-index: 0;
+}
+
+/* TAB CARD */
+.tabCardContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+
+    background-color: white;
+    animation: openCard 0.5s linear;
+}
+
+@keyframes openCard {
+    0% {top: -100rem;}
+    100% {top: 0rem;}
+}
+
+.tabCardContainerClose {
+    animation: closeCard 0.5s linear;
+}
+
+@keyframes closeCard {
+    0% {top: 0rem;}
+    100% {top: -100rem;}
+}
+
+.tabCardSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    display: flex;
+    position: absolute;
+    width: 110%;
+    bottom: 55%;
+}
+
+.textCard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    margin: 1.3rem;
+    top: 45%;
+    
+    color: #2b3a51;
+}
+
+.textCard p {
+    height: 6rem;
+    line-height: 1.5rem;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.tec {
+    font-size: 0.8rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.textCard a:active,
+.textCard a:link,
+.textCard a:visited {
+    text-decoration: none;
+}
+
+.textCard a:first-child {
+    border: 2px solid #2b3a51;
+    color: #2b3a51;
+    border-radius: 2px;
+    padding: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.textCard a:first-child:hover {
+    background-color: #2b3a51;
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.textCard a:last-child {
+    background-color: #2b3a51;
+    color: white;
+    border: 2px solid #2b3a51;
+    border-radius: 2px;
+    padding: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.textCard a:last-child:hover {
+    background-color: white;
+    border: 2px solid #2b3a51;
+    color: #2b3a51;
+    border-radius: 2px;
+    padding: 0.4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cardExit {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.cardExit img {
+    width: 10%;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+
+    margin: 1rem;
+}
+
+.footerSubContainer {
+    display: flex;
+    justify-content: center;  
+}
+
+h4 {
+    color: #2b3a51;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+/* MOBILE 320px */
+@media only screen and (max-width: 321px) {
+
+/* MENU */
+.img1 {
+    width: 2.2rem;
+}
+
+.img2 {
+    width: 2.2rem;
+}
+
+/* CONTENT */
+
+/* FOOTER */
+h4 {
+    font-size: 0.7rem;
+}
+
+}
+
+/* TABLET 768px */
+@media only screen and (min-width: 767px) {
+
+/* MENU */
+.img1 {
+    width: 3rem;
+}
+
+.img2 {
+    width: 3rem;
+}
+
+/* TAB MENU */
+.tabContainer {
+    font-size: 2.3rem;
+    font-weight: 700;
+
+}
+
+.tabSubContainer {
+    padding-top: 50%;
+    line-height: 4rem;
+}
+
+/* CONTENT */
+.groupCardContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 0rem;
+}
+.groupCardSubContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0rem;
+}
+
+.cardContainer {
+    width: 40%;
+}
+
+.cardContainer img {
+    width: 100%;
+    padding: 0rem;
+}
+
+figcaption {
+    width: 100%;
+    font-size: 1rem;
+}
+
+figcaption h2 {
+    margin-top: 3rem;
+}
+
+/* TAB CARD */
+.textCard {
+    margin: 2rem;
+}
+
+.textCard p {
+    font-size: 1.1rem;
+}
+
+.textCard a:first-child,
+.textCard a:last-child {
+    font-size: 1.2rem;
+}
+
+.cardExit img {
+    width: 5%;
+}
+
+/* FOOTER */
+.footerSubContainer {
+    display: flex;
+    justify-content: center;  
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+}
+
+/* TABLET PLUS 1024px */
+@media only screen and (min-width: 1023px) {
+
+/* MENU */
+.img1 {
+    width: 3.5rem;
+}
+
+.img2 {
+    width: 3.5rem;
+}
+
+/* CONTENT */
+figcaption h2 {
+    margin-top: 4rem;
+}
+
+/* TAB CARD */
+.textCard {
+    margin: 2rem;
+}
+
+.textCard h2 {
+    font-size: 2rem;
+}
+
+.textCard p {
+    font-size: 1.4rem;
+}
+
+.tec {
+    font-size: 1.2rem;
+}
+
+.textCard a:first-child,
+.textCard a:last-child {
+    font-size: 1.3rem;
+}
+
+.cardExit img {
+    width: 5%;
+}
+
+/* FOOTER */
+h4 {
+    font-size: 1.3rem;
+}
+
+}
+
+/* DESKTOP 1366px */
+@media only screen and (min-width: 1365px) {
+
+/* MENU */
+.img1 {
+    width: 2.2rem;
+}
+
+.img2 {
+    display: none;
+}
+
+.listMenu {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    list-style-type: none;
+    align-content: center;
+    font-weight: 500;
+}
+
+.listMenu li {
+    margin: 0rem 1.5rem;
+}
+
+.listMenu li a:link,
+.listMenu li a:visited, 
+.listMenu li a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.listMenu li a {
+    padding-bottom: 0.3rem;
+} 
+.listMenu li a:hover {
+    font-weight: 700;
+    border-bottom: 2px solid white;
+}
+
+/* TAB MENU */
+.tabContainer {
+    display: none;
+}
+
+/* CONTENT */
+.IntroSubContainer {
+    margin-bottom: 0.7rem;
+}
+.groupCardContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 0rem;
+}
+.groupCardSubContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0rem;
+}
+
+.cardContainer {
+    width: 20%;
+}
+
+.cardContainer img {
+    width: 100%;
+    padding: 0rem;
+}
+
+figcaption {
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+figcaption h2 {
+    margin-top: 3rem;
+}
+
+/* TAB CARD */
+.tabCardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.tabCardSubContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card img {
+    display: flex;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+}
+
+.textCard {
+    display: flex;
+    position: relative;
+    top: 0rem;
+    width: 70%;
+    height: 100%;
+    margin: 2rem;
+}
+
+.textCard h2 {
+    font-size: 2.5rem;
+}
+
+.textCard p {
+    font-size: 1rem;
+    overflow-y: visible;
+    margin-bottom: 0rem;
+    margin-right: 4rem;
+}
+
+.tec {
+    margin-top: 0rem;
+    font-size: 0.8rem;
+}
+
+.cardExit {
+    left: 30%;
+}
+.cardExit img {
+    width: 3%;
+}
+
+/* FOOTER */
+.footerSubContainer {
+    position: absolute;
+    bottom: 1rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+}
+
+}
+
+/* DESKTOP PLUS 1920px */
+@media only screen and (min-width: 1919px) {
+
+/* MENU */
+.img1 {
+    width: 2.7rem;
+}
+
+.img2 {
+    width: 2.7rem;
+}
+
+/* CONTENT */
+.IntroSubContainer {
+    margin-bottom: 7rem;
+}
+
+figcaption {
+    padding-top: 2rem;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+h4 {
+    font-size: 1.1rem;
+}
+
+}
+
