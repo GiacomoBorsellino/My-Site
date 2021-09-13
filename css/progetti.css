@@ -788,6 +788,10 @@ figcaption h2 {
     width: 3%;
 }
 
+.space {
+    margin-top: 6rem;
+}
+
 /* FOOTER */
 .footerSubContainer {
     position: absolute;
