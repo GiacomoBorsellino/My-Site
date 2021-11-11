@@ -22,12 +22,13 @@ body {
     justify-content: center;
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .root img {
+    width: 100%;
     margin: auto;
-    width: 350%;
     animation: rotationImg 4s infinite;
 }
 
@@ -37,16 +38,4 @@ body {
     50%{filter: brightness(100%);}
     90%{opacity: 1;}
     100%{opacity: 0; filter: brightness(0%);} 
-}
-
-@media only screen and (min-width:1365px) {
-.root img {
-    width: 100%;
-}   
-}
-
-@media only screen and (min-width:1919px) {
-.root img {
-    width: 200%;
-}   
 }
