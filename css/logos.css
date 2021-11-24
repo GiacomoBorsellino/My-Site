@@ -5,6 +5,27 @@
     box-sizing: border-box;
 }
 
+/* FONT */
+@font-face {
+    font-family: louis cafe;
+    src: url(../font/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: heavy rain;
+    src: url(../font/HeavyRain.ttf);
+}
+
+@font-face {
+    font-family: adelia;
+    src: url(../font/adelia.ttf);
+}
+
+@font-face {
+    font-family: conthrax;
+    src: url(../font/conthrax-sb.ttf);
+}
+
 body {
     background: white;
     animation: rotationBg 4s infinite;
