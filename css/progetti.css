@@ -16,7 +16,7 @@
 }
 
 .img1 {
-    font-family: squared;
+    font-family: 'squared';
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     background: linear-gradient(10deg, rgba(255,255,255,1) 40.8%, rgba(43,58,81,1) 41%);
     background-repeat: no-repeat;
     background-position: center;
-    font-family: louis cafe;
+    font-family: 'louis cafe';
     color: white;
 }
 
