@@ -48,7 +48,7 @@ body {
 }
 
 .root img {
-    width: 100%;
+    width: 90vw;
     margin: auto;
     animation: rotationImg 4s infinite;
 }
@@ -59,4 +59,10 @@ body {
     50%{filter: brightness(100%);}
     90%{opacity: 1;}
     100%{opacity: 0; filter: brightness(0%);} 
+}
+
+@media only screen and (min-width: 1200px) {
+.root img {
+    width: 20vw;
+}    
 }

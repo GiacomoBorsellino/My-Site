@@ -1,14 +1,14 @@
 
 function logo1() {
-    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo1.svg";    
+    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo1.png";    
 }
 
 function logo2() {
-    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo2.svg";    
+    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo2.png";    
 }
 
 function logo3() {
-    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo3.svg";    
+    document.body.getElementsByClassName("imgLogos")[0].src = "../images/logo3.png";    
 }
 
 setTimeout(() => {logo1()}, 0);
