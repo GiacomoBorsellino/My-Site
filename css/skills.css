@@ -610,7 +610,7 @@ main {
 
 /* FOOTER */
 .footerSubContainer {
-    position: absolute;
+    position: relative;
     bottom: 0.7rem;
 }
 
