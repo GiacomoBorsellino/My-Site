@@ -571,6 +571,9 @@ h4 {
 
 .maintenance {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   inset: 0px;
   width: 40%;
   height: 30%;
@@ -581,13 +584,11 @@ h4 {
   border-radius: 30px;
   border: 8px solid #2b3a51;
   text-wrap: wrap;
-  padding: 3rem;
+  padding: 1rem;
 
   opacity: 0.8;
 
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-  /* transform: scale(1);
-  animation: pulse 2s infinite; */
 
   animation: slideDown 1.5s ease-out forwards;
   animation-delay: 2s;
@@ -596,6 +597,7 @@ h4 {
 .int {
   text-align: center;
   color: #2b3a51;
+  font-size: 1.5rem;
 }
 
 /* @keyframes pulse {
